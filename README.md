@@ -109,15 +109,6 @@ The API uses custom exception handling for clear HTTP responses:
 
 ---
 
-## 🧠 Key Notes
-
-* Uses **`javax.*` (Java EE)** → compatible with **Tomcat 9**
-* Do **NOT** use Tomcat 10 (requires `jakarta.*`)
-* Uses annotation-based configuration (`@ApplicationPath`)
-* No embedded server - runs fully on Tomcat
-
----
-
 ## 🧪 Working curl Commands
 
 Set once:
