@@ -196,7 +196,7 @@ src/main/java/
 
 ---
 
-Part 1 — Service Architecture & Setup
+Part 1 - Service Architecture & Setup
 
 Q1: JAX-RS Resource Class Lifecycle
 
@@ -217,7 +217,7 @@ Q4: Is DELETE Idempotent in This Implementation?
 
 Yes, DELETE is idempotent at the state level. The initial DELETE request removes the room. Any subsequent DELETE request will return a 404 Not Found response. However, the server status will remain unchanged as the room does not exist. HTTP calls are guaranteed to reach the same end state within insight on repeated calls. Repeated calls don’t necessarily return the same response code. Returning a 404 when a second delete is done is correct and in line with REST.
 
-Part 3 — Sensor Operations & Linking
+Part 3 - Sensor Operations & Linking
 
 Q5: Handling Unsupported Media Types with @Consumes
 
@@ -227,13 +227,13 @@ Q6: Query Parameter vs Path Segment for Filtering
 
 Using @QueryParam (for example, ?type=CO2) is preferred because filtering is not part of the resource identity – it’s just an optional modifier on a collection. Resource path refers to sensor entity and query string is applied to filter results. If you embed the filter in the path (such as /sensors/type/CO2) it implies that this is a separate sub-resource and that is semantic wrong. It also becomes unmanageable if you start to have a lot of filters. Query parameters support optional filters that can combinably be added by the user (e.g., ?type=CO2?status=ACTIVE) without any effect on the path.
 
-Part 4 — Deep Nesting with Sub-Resources
+Part 4 - Deep Nesting with Sub-Resources
 
 Q7: Benefits of the Sub-Resource Locator Pattern
 
 The Sub-Resource Locator pattern allows a resource (SensorResource) to delegate nested path handling to a class (SensorReadingResource) at runtime. By doing this, it restricts each class to have one responsibility only. In other words, avoids building one large unmanageable controller. Also, the parent sensor Id can be passed through the constructor seamlessly. Furthermore, it allows each class to be tested independently, resulting in increased code quality and maintainability in large APIs.
 
-Part 5 — Advanced Error Handling, Exception Mapping & Logging
+Part 5 - Advanced Error Handling, Exception Mapping & Logging
 
 Q8: Why HTTP 422 is More Semantically Accurate than 404
 
