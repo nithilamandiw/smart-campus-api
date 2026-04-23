@@ -178,15 +178,6 @@ src/main/java/
 
 ---
 
-## 📌 Notes
-
-* Built using JAX-RS (Jersey 2.x)
-* Deployed on Apache Tomcat 9
-* Uses `javax.*` (Java EE)
-* Annotation-based configuration (`@ApplicationPath`)
-
----
-
 Part 1 - Service Architecture & Setup
 
 Q1: JAX-RS Resource Class Lifecycle
