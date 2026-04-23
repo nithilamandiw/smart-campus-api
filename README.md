@@ -164,16 +164,6 @@ curl -X DELETE "$BASE_URL/rooms/room-empty"
 ```
 
 ---
-
-## 📦 Project Structure
-
-```
-src/main/java/
- ├── resource        # REST endpoints
- ├── model           # Data models
- ├── store           # In-memory data stores
- ├── exception       # Custom exceptions
- └── config          # Application configuration
 ```
 
 ---
