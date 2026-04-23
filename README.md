@@ -164,7 +164,6 @@ curl -X DELETE "$BASE_URL/rooms/room-empty"
 ```
 
 ---
-```
 
 ---
 
